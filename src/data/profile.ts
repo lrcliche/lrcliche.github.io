@@ -21,9 +21,9 @@ export const profileData: Profile = {
   },
   socials: {
     github: 'https://github.com/lrcliche',
-    linkedin: undefined, // Pending confirmation
-    email: undefined // Pending confirmation
+    linkedin: "https://www.linkedin.com/in/luis-alberto-ramos-quesada-0052612b6", // Pending confirmation
+    email: "luisramos21081996@gmail.com" // Pending confirmation
   },
-  cvUrl: undefined, // Will be set when PDF is provided
+  cvUrl: "public/cv/Luis_Ramos_Senior_Backend_Mobile.pdf", // Will be set when PDF is provided
   availableForWork: true
 }
