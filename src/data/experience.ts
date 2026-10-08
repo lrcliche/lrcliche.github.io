@@ -2,12 +2,12 @@ import type { Experience } from '../types/portfolio'
 
 export const experienceData: Experience[] = [
   {
-    id: 'exp-devices-tech',
+    id: 'exp-devitech',
     position: {
-      en: 'Senior Backend Engineer & Software Architect',
-      es: 'Senior Backend Engineer y Arquitecto de Software'
+      en: 'Senior Backend / Full Stack Engineer & DBA',
+      es: 'Senior Backend / Full Stack Engineer y DBA'
     },
-    employer: 'Devices & Technology S.A.S',
+    employer: 'Devitech S.A.S',
     start: '2019',
     end: {
       en: 'Present',
@@ -15,28 +15,30 @@ export const experienceData: Experience[] = [
     },
     highlights: {
       en: [
-        'Led architecture design and backend microservices implementation using Go, Java, and NestJS.',
-        'Architected decoupled Hexagonal Architecture services with domain event streaming and Redis caching.',
-        'Integrated industrial communication protocols, IoT hardware controllers, and real-time telemetry pipelines.',
-        'Mentored engineering teams on clean code, REST/gRPC standards, and containerized CI/CD workflows.'
+        'Engineered scalable backend APIs, microservices, and Full Stack features using Go, Java, and TypeScript/Node.js.',
+        'Managed PostgreSQL and MongoDB database administration, query optimization, indexing, and high-volume data integration.',
+        'Architected async messaging pipelines utilizing RabbitMQ, MQTT, gRPC, and custom event processing for POS systems.',
+        'Integrated industrial fuel dispensers, ATG systems, Veeder-Root controllers, Modbus, TCP/IP, and serial device communications.',
+        'Performed Linux/VPS server management, manual production deployments, SonarQube code quality audits, and live incident troubleshooting.'
       ],
       es: [
-        'Lideré el diseño de arquitectura e implementación de microservicios backend utilizando Go, Java y NestJS.',
-        'Diseñé servicios con Arquitectura Hexagonal desacoplada con flujo de eventos de dominio y almacenamiento en caché con Redis.',
-        'Integré protocolos de comunicación industrial, controladores de hardware IoT y pipelines de telemetría en tiempo real.',
-        'Guié a los equipos de ingeniería en código limpio, estándares REST/gRPC y flujos de integración continua con Docker.'
+        'Desarrollo de APIs backend escalables, microservicios y funcionalidades Full Stack utilizando Go, Java y TypeScript/Node.js.',
+        'Administración de bases de datos PostgreSQL y MongoDB, optimización de consultas SQL, indexación e integración masiva de información.',
+        'Diseño de pipelines de mensajería asíncrona utilizando RabbitMQ, MQTT, gRPC y procesamiento propio de eventos para sistemas POS.',
+        'Integración con surtidores de combustible, dispositivos ATG, sistemas Veeder-Root, comunicación Modbus, TCP/IP y serial.',
+        'Administración de servidores Linux/VPS, despliegues manuales en producción, análisis de calidad con SonarQube y resolución de incidentes productivos.'
       ]
     },
-    technologies: ['Go', 'Java', 'NestJS', 'PostgreSQL', 'Redis', 'Docker', 'Hexagonal Architecture', 'WebSockets'],
+    technologies: ['Go', 'Java', 'Node.js', 'PostgreSQL', 'MongoDB', 'RabbitMQ', 'MQTT', 'gRPC', 'Modbus', 'TCP/IP', 'Linux', 'SonarQube'],
     published: true
   },
   {
     id: 'exp-factra-lead',
     position: {
-      en: 'Lead Architect & Tech Lead (Electronic Invoicing)',
-      es: 'Líder de Arquitectura y Tecnología (Facturación Electrónica)'
+      en: 'Lead Architect & Developer (Electronic Invoicing)',
+      es: 'Líder de Arquitectura y Desarrollo (Facturación Electrónica)'
     },
-    employer: 'Factra (Proyecto Personal / Solución Tecnológica)',
+    employer: 'Factra (Plataforma SaaS / Proyecto Tecnológico)',
     start: '2021',
     end: {
       en: 'Present',
@@ -44,17 +46,17 @@ export const experienceData: Experience[] = [
     },
     highlights: {
       en: [
-        'Designed end-to-end electronic invoicing platform supporting high-volume tax document generation, validation, and signing.',
-        'Built asynchronous queue consumers for resilient submission to government tax service endpoints.',
-        'Implemented multi-tenant authorization, client API keys, and audit logging microservices.'
+        'Designed end-to-end electronic invoicing platform supporting high-volume tax document generation, validation, and XAdES/XMLDSig signing.',
+        'Built asynchronous queue consumers for resilient submission to government tax service endpoints with zero data loss.',
+        'Implemented multi-tenant authorization, client API keys, sales/inventory modules, and audit logging microservices.'
       ],
       es: [
-        'Diseñé plataforma integral de facturación electrónica para generación, validación y firma de comprobantes tributarios de alto volumen.',
-        'Construí consumidores de colas asíncronas para el envío tolerante a fallos hacia los servicios gubernamentales.',
-        'Implementé microservicios de autorización multi-inquilino (multi-tenant), llaves de API para clientes y trazabilidad de auditoría.'
+        'Diseñé plataforma integral de facturación electrónica para generación, validación y firma criptográfica (XAdES/XMLDSig) de comprobantes tributarios de alto volumen.',
+        'Construí consumidores de colas asíncronas para el envío tolerante a fallos hacia los servicios gubernamentales sin pérdida de datos.',
+        'Implementé microservicios de autorización multi-inquilino (multi-tenant), llaves de API para clientes, módulos de ventas/inventario y trazabilidad de auditoría.'
       ]
     },
-    technologies: ['Go', 'Node.js', 'TypeScript', 'PostgreSQL', 'Docker', 'RabbitMQ/Redis'],
+    technologies: ['Go', 'Node.js', 'TypeScript', 'NestJS', 'PostgreSQL', 'Docker', 'Redis', 'REST APIs'],
     published: true
   }
 ]

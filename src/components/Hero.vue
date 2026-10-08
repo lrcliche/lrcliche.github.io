@@ -67,7 +67,7 @@ const t = (keyPath: string) => {
           rel="noopener noreferrer" 
           class="px-6 py-3 rounded-lg bg-transparent hover:bg-slate-800 border border-emerald-500/50 text-emerald-400 font-semibold transition-colors"
         >
-          {{ t('hero.downloadCv') }}
+          {{ t('hero.viewCv') }}
         </a>
       </div>
     </div>

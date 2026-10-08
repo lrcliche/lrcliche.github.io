@@ -24,7 +24,9 @@ const categories = [
   { id: 'frontend', titleKey: 'tech.frontend' },
   { id: 'mobile', titleKey: 'tech.mobile' },
   { id: 'databases', titleKey: 'tech.databases' },
-  { id: 'infrastructure', titleKey: 'tech.infrastructure' }
+  { id: 'messaging', titleKey: 'tech.messaging' },
+  { id: 'infrastructure', titleKey: 'tech.infrastructure' },
+  { id: 'architecture', titleKey: 'tech.architecture' }
 ]
 
 const getTechByCategory = (catId: string) => {
@@ -44,10 +46,11 @@ const getTechByCategory = (catId: string) => {
         <div 
           v-for="cat in categories" 
           :key="cat.id" 
-          class="bg-slate-900 border border-slate-800 rounded-xl p-6"
+          class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-colors"
         >
-          <h3 class="text-lg font-bold text-white mb-4 border-b border-slate-800 pb-2">
-            {{ t(cat.titleKey) }}
+          <h3 class="text-base font-bold text-white mb-4 border-b border-slate-800 pb-2 flex items-center justify-between">
+            <span>{{ t(cat.titleKey) }}</span>
+            <span class="text-xs font-mono text-emerald-400 font-normal">({{ getTechByCategory(cat.id).length }})</span>
           </h3>
 
           <div class="flex flex-wrap gap-2">

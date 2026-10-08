@@ -69,7 +69,21 @@ export interface Project {
 
 export interface Technology {
   name: string
-  category: 'backend' | 'frontend' | 'mobile' | 'databases' | 'infrastructure'
+  category: 'backend' | 'frontend' | 'mobile' | 'databases' | 'messaging' | 'infrastructure' | 'architecture'
   proficiencyLabel?: 'professional' | 'project' | 'familiar'
   logo?: string
+}
+
+export interface ExpertiseItem {
+  id: string
+  title: {
+    en: string
+    es: string
+  }
+  description: {
+    en: string
+    es: string
+  }
+  skills: string[]
+  icon: string
 }
