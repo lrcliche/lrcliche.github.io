@@ -2,6 +2,56 @@ import type { Project } from '../types/portfolio'
 
 export const projectsData: Project[] = [
   {
+    id: 'factra-electronic-invoicing',
+    title: 'Factra — Electronic Invoicing Platform (Personal Project)',
+    summary: {
+      en: 'Personal electronic invoicing engine and API suite for high-volume tax document signing, validation, and submission.',
+      es: 'Plataforma y suite de APIs personal de facturación electrónica para firma, validación y envío masivo de comprobantes tributarios.'
+    },
+    category: 'backend',
+    tech: ['Go', 'Node.js / TypeScript', 'PostgreSQL', 'Docker', 'REST APIs', 'Redis'],
+    problem: {
+      en: 'Required a high-throughput, fault-tolerant invoicing engine capable of processing spikes of tax invoices with zero data loss.',
+      es: 'Se requería un motor de facturación de alto rendimiento y tolerante a fallos capaz de procesar picos de emisión tributaria sin pérdida de información.'
+    },
+    solution: {
+      en: 'Architected async queued processing pipeline for PDF/XML document generation, XAdES/XMLDSig cryptographic signing, and retry adapters.',
+      es: 'Se diseñó un pipeline de procesamiento asíncrono para generación de comprobantes PDF/XML, firma criptográfica XAdES/XMLDSig y adaptadores de reintento.'
+    },
+    outcome: {
+      en: 'Robust personal software product delivering fast document validation and complete compliance under heavy load spikes.',
+      es: 'Producto de software personal robusto que entrega rápida validación de comprobantes y cumplimiento completo bajo picos de carga.'
+    },
+    visibility: 'case-study',
+    featured: true,
+    published: true
+  },
+  {
+    id: 'urban-taxi-app',
+    title: 'Urban Mobility & Taxi App (Personal Project)',
+    summary: {
+      en: 'Personal mobile ecosystem for real-time ride matching, live GPS tracking, and route optimization.',
+      es: 'Ecosistema móvil personal para asignación de viajes en tiempo real, rastreo GPS en vivo y optimización de rutas.'
+    },
+    category: 'mobile',
+    tech: ['Flutter / Dart', 'React Native / Expo', 'WebSockets', 'Go', 'REST APIs'],
+    problem: {
+      en: 'Exploring cross-platform mobile patterns for live location streaming, instant driver dispatch, and low-latency socket state.',
+      es: 'Exploración de patrones móviles multiplataforma para emisión de ubicación en vivo, despacho instantáneo de conductores y estado por sockets.'
+    },
+    solution: {
+      en: 'Developed a dual passenger/driver workflow featuring interactive map integration, WebSocket location update events, and state management.',
+      es: 'Se desarrolló un flujo para pasajeros y conductores con integración de mapas interactivos, eventos WebSocket de ubicación y gestión de estado.'
+    },
+    outcome: {
+      en: 'Fully functional personal prototype showcasing mobile UI architecture and geospatial event handling.',
+      es: 'Prototipo personal funcional que demuestra arquitectura UI móvil y manejo de eventos geoespaciales.'
+    },
+    visibility: 'case-study',
+    featured: true,
+    published: true
+  },
+  {
     id: 'go-hexagonal-template',
     title: 'Go Hexagonal Architecture Template',
     summary: {
@@ -28,31 +78,6 @@ export const projectsData: Project[] = [
     published: true
   },
   {
-    id: 'factra-electronic-invoicing',
-    title: 'Factra — Electronic Invoicing Platform',
-    summary: {
-      en: 'Scalable backend API ecosystem for processing and validating high-volume electronic invoice tax documents.',
-      es: 'Ecosistema de APIs backend escalables para el procesamiento y validación de documentos tributarios de facturación electrónica.'
-    },
-    category: 'backend',
-    tech: ['Go', 'Node.js / TypeScript', 'PostgreSQL', 'Docker', 'REST APIs'],
-    problem: {
-      en: 'Required high throughput and zero data loss for signing, validating, and submitting tax invoice records to government endpoints.',
-      es: 'Se requería un alto procesamiento sin pérdida de datos para la firma, validación y envío de registros tributarios a servicios gubernamentales.'
-    },
-    solution: {
-      en: 'Architected async queued processing pipeline for PDF/XML document generation, cryptographic signing, and fault-tolerant retry adapters.',
-      es: 'Se diseñó un pipeline de procesamiento asíncrono en cola para generación de PDF/XML, firma criptográfica y adaptadores con tolerancia a fallos.'
-    },
-    outcome: {
-      en: 'Reliable backend services delivering fast processing speed and robust compliance under heavy payload spikes.',
-      es: 'Servicios backend fiables que entregan alta velocidad de procesamiento y cumplimiento tributario bajo picos de carga.'
-    },
-    visibility: 'case-study',
-    featured: true,
-    published: true
-  },
-  {
     id: 'emaus-pos-system',
     title: 'EMAUS POS — Point of Sale & Inventory',
     summary: {
@@ -74,7 +99,7 @@ export const projectsData: Project[] = [
       es: 'Mejora en la velocidad de atención en caja, eliminación de discrepancias de inventario y agilización de arqueos diarios.'
     },
     visibility: 'case-study',
-    featured: true,
+    featured: false,
     published: true
   },
   {
@@ -122,31 +147,6 @@ export const projectsData: Project[] = [
     outcome: {
       en: 'Fast sales processing on mobile handheld devices with resilient automatic synchronization.',
       es: 'Procesamiento rápido de ventas en dispositivos portátiles con sincronización automática y resistente.'
-    },
-    visibility: 'case-study',
-    featured: false,
-    published: true
-  },
-  {
-    id: 'urban-taxi-app',
-    title: 'Urban Mobility & Taxi Application (Personal Project)',
-    summary: {
-      en: 'Personal mobile application project exploring real-time location tracking, ride matching, and route optimization.',
-      es: 'Proyecto personal móvil enfocado en rastreo de ubicación en tiempo real, asignación de viajes y optimización de rutas.'
-    },
-    category: 'mobile',
-    tech: ['Flutter / Dart', 'React Native', 'WebSockets', 'REST APIs'],
-    problem: {
-      en: 'Exploring cross-platform mobile patterns for live location streaming and driver dispatch mechanisms.',
-      es: 'Exploración de patrones móviles multiplataforma para emisión de ubicación en vivo y despacho de conductores.'
-    },
-    solution: {
-      en: 'Developed a dual passenger/driver workflow featuring interactive map integration, WebSocket location update events, and state management.',
-      es: 'Se desarrolló un flujo para pasajeros y conductores con integración de mapas interactivos, eventos WebSocket de ubicación y gestión de estado.'
-    },
-    outcome: {
-      en: 'Fully functional personal prototype showcasing mobile UI architecture and geospatial event handling.',
-      es: 'Prototipo personal funcional que demuestra arquitectura UI móvil y manejo de eventos geoespaciales.'
     },
     visibility: 'case-study',
     featured: false,
