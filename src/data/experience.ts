@@ -7,7 +7,7 @@ export const experienceData: Experience[] = [
       en: 'Senior Backend Engineer / Tech Lead',
       es: 'Senior Backend Engineer / Lider Técnico'
     },
-    employer: 'Enterprise & Industrial Solutions (Verified Path)',
+    employer: 'Devices & Technology S.A.S',
     start: '2019',
     end: {
       en: 'Present',
