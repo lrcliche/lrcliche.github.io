@@ -4,8 +4,8 @@ export const experienceData: Experience[] = [
   {
     id: 'exp-devitech',
     position: {
-      en: 'Senior Backend / Full Stack Engineer & DBA',
-      es: 'Senior Backend / Full Stack Engineer y DBA'
+      en: 'Senior Backend / Full Stack Engineer',
+      es: 'Senior Backend / Full Stack Engineer'
     },
     employer: 'Devitech S.A.S',
     start: '2019',
