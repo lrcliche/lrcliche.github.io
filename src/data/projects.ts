@@ -2,50 +2,100 @@ import type { Project } from '../types/portfolio'
 
 export const projectsData: Project[] = [
   {
-    id: 'factra-electronic-invoicing',
-    title: 'Factra — Electronic Invoicing Platform (Personal Project)',
+    id: 'factra-platform',
+    title: 'Factra — Electronic Invoicing & SaaS Ecosystem',
     summary: {
-      en: 'Personal electronic invoicing engine and API suite for high-volume tax document signing, validation, and submission.',
-      es: 'Plataforma y suite de APIs personal de facturación electrónica para firma, validación y envío masivo de comprobantes tributarios.'
+      en: 'Microservices-based electronic invoicing platform, API gateway, inventory, sales, payment management, and async tax document validation.',
+      es: 'Ecosistema SaaS de facturación electrónica basado en microservicios, API Gateway, inventario, ventas, pagos y validación asíncrona de comprobantes.'
     },
     category: 'backend',
-    tech: ['Go', 'Node.js / TypeScript', 'PostgreSQL', 'Docker', 'REST APIs', 'Redis'],
+    tech: ['Go', 'Node.js', 'NestJS', 'PostgreSQL', 'API Gateway', 'Docker', 'Redis'],
     problem: {
-      en: 'Required a high-throughput, fault-tolerant invoicing engine capable of processing spikes of tax invoices with zero data loss.',
-      es: 'Se requería un motor de facturación de alto rendimiento y tolerante a fallos capaz de procesar picos de emisión tributaria sin pérdida de información.'
+      en: 'High-volume tax document processing requires resilient architectural boundaries, authentication gateways, and zero-loss queuing mechanisms for government endpoints.',
+      es: 'El procesamiento masivo de comprobantes tributarios requiere límites arquitectónicos resilientes, pasarelas de autenticación y mecanismos de colas sin pérdida para servicios gubernamentales.'
     },
     solution: {
-      en: 'Architected async queued processing pipeline for PDF/XML document generation, XAdES/XMLDSig cryptographic signing, and retry adapters.',
-      es: 'Se diseñó un pipeline de procesamiento asíncrono para generación de comprobantes PDF/XML, firma criptográfica XAdES/XMLDSig y adaptadores de reintento.'
+      en: 'Built modular microservices around API Gateway authentication, async queue workers for XAdES/XMLDSig signing, sales/inventory modules, and audit logging.',
+      es: 'Se construyeron microservicios modulares con autenticación mediante API Gateway, trabajadores de colas asíncronas para firma XAdES/XMLDSig, módulos de ventas/inventario y auditoría.'
     },
     outcome: {
-      en: 'Robust personal software product delivering fast document validation and complete compliance under heavy load spikes.',
-      es: 'Producto de software personal robusto que entrega rápida validación de comprobantes y cumplimiento completo bajo picos de carga.'
+      en: 'Scalable SaaS architecture providing fast document response times, reliable inventory locks, and fault-tolerant retry workflows.',
+      es: 'Arquitectura SaaS escalable que ofrece respuestas rápidas en comprobantes, bloqueos de inventario confiables y flujos de reintento con tolerancia a fallos.'
     },
     visibility: 'case-study',
     featured: true,
     published: true
   },
   {
-    id: 'urban-taxi-app',
-    title: 'Urban Mobility & Taxi App (Personal Project)',
+    id: 'factra-mobile-pos',
+    title: 'Factra Mobile POS — Handheld Checkout & Offline Sync',
     summary: {
-      en: 'Personal mobile ecosystem for real-time ride matching, live GPS tracking, and route optimization.',
-      es: 'Ecosistema móvil personal para asignación de viajes en tiempo real, rastreo GPS en vivo y optimización de rutas.'
+      en: 'Cross-platform mobile application for handheld sales checkout, barcode scanning, local persistence, and background cloud sync.',
+      es: 'Aplicación móvil multiplataforma para ventas en terminales portátiles, escaneo de código de barras, persistencia local y sincronización en segundo plano.'
     },
     category: 'mobile',
-    tech: ['Flutter / Dart', 'React Native / Expo', 'WebSockets', 'Go', 'REST APIs'],
+    tech: ['Vue 3', 'Vite', 'Capacitor', 'TypeScript', 'Tailwind CSS', 'SQLite'],
     problem: {
-      en: 'Exploring cross-platform mobile patterns for live location streaming, instant driver dispatch, and low-latency socket state.',
-      es: 'Exploración de patrones móviles multiplataforma para emisión de ubicación en vivo, despacho instantáneo de conductores y estado por sockets.'
+      en: 'Store operators need handheld sales terminals that continue performing billing and stock lookup inside warehouse zones without Wi-Fi connectivity.',
+      es: 'Operadores comerciales requieren terminales de venta portátiles que continúen facturando y consultando inventario en zonas sin cobertura Wi-Fi.'
     },
     solution: {
-      en: 'Developed a dual passenger/driver workflow featuring interactive map integration, WebSocket location update events, and state management.',
-      es: 'Se desarrolló un flujo para pasajeros y conductores con integración de mapas interactivos, eventos WebSocket de ubicación y gestión de estado.'
+      en: 'Implemented a Vue + Capacitor hybrid mobile app featuring camera barcode scanning, mobile/tablet layouts, SQLite offline queue storage, background sync, and prep for Bluetooth thermal printing.',
+      es: 'Se implementó una app móvil híbrida con Vue + Capacitor con escaneo de barras por cámara, pantallas adaptadas a móviles/tablets, almacenamiento SQLite offline, sincronización y preparación para impresoras térmicas Bluetooth.'
     },
     outcome: {
-      en: 'Fully functional personal prototype showcasing mobile UI architecture and geospatial event handling.',
-      es: 'Prototipo personal funcional que demuestra arquitectura UI móvil y manejo de eventos geoespaciales.'
+      en: 'High sales speed on handheld devices with resilient automatic background synchronization upon reconnection.',
+      es: 'Alta velocidad de atención en movilidad con sincronización automática en segundo plano al recuperar conexión.'
+    },
+    visibility: 'case-study',
+    featured: true,
+    published: true
+  },
+  {
+    id: 'emaus-pos-system',
+    title: 'EMAUS POS — Multi-Branch Point of Sale & Inventory',
+    summary: {
+      en: 'Full Stack multi-branch point-of-sale system featuring shift control, terminal management, inventory locks, and sales reporting.',
+      es: 'Sistema de punto de venta multisucursal Full Stack con control de turnos, gestión de terminales, bloqueo de inventario y reportes de ventas.'
+    },
+    category: 'fullstack',
+    tech: ['NestJS', 'TypeScript', 'Vue 3', 'PostgreSQL', 'Redis', 'Docker'],
+    problem: {
+      en: 'Retail stores required fast checkout terminals, shift reconciliation, real-time inventory synchronization across locations, and external system integrations.',
+      es: 'Tiendas comerciales requerían velocidad en terminales de caja, arqueos de turno, sincronización de stock en tiempo real entre sedes e integraciones externas.'
+    },
+    solution: {
+      en: 'Architected modular NestJS backend services coupled with a responsive Vue frontend, handling offline cash sessions, inventory locking, and audit logs.',
+      es: 'Se diseñó un backend NestJS modular junto a un frontend Vue responsive, gestionando sesiones de caja offline, bloqueo de inventario y registros de auditoría.'
+    },
+    outcome: {
+      en: 'Streamlined cashier workflows, eliminated inventory sync conflicts, and improved daily shift audit accuracy.',
+      es: 'Flujos de atención optimizados, eliminación de conflictos de inventario y precisión en arqueos de caja diarios.'
+    },
+    visibility: 'case-study',
+    featured: true,
+    published: true
+  },
+  {
+    id: 'industrial-dispenser-integrations',
+    title: 'Industrial Controller & Real-Time Event Integrations',
+    summary: {
+      en: 'Event-driven edge integration connecting fuel dispensers, ATG devices (Veeder-Root), serial/Modbus protocols, and cloud APIs.',
+      es: 'Integración en el borde orientada a eventos para conexión de surtidores, dispositivos ATG (Veeder-Root), protocolos serial/Modbus y APIs en la nube.'
+    },
+    category: 'industrial',
+    tech: ['Go', 'Veeder-Root ATG', 'Modbus', 'TCP/IP', 'Serial Comms', 'MQTT', 'RabbitMQ', 'Redis'],
+    problem: {
+      en: 'Interfacing physical fuel dispensing hardware and tank monitoring units over serial/TCP protocols with cloud-based ERP and reporting engines.',
+      es: 'Conexión de hardware físico de dispensado y monitoreo de tanques sobre protocolos serial/TCP con motores de reporte y ERPs en la nube.'
+    },
+    solution: {
+      en: 'Built an event-driven edge listener using Go, MQTT, and RabbitMQ to process high-frequency telemetry, control dispenser state machines, and persist operational metrics into PostgreSQL/MongoDB.',
+      es: 'Se construyó un oyente en el borde en Go, MQTT y RabbitMQ para procesar telemetría de alta frecuencia, controlar máquinas de estado y guardar métricas en PostgreSQL/MongoDB.'
+    },
+    outcome: {
+      en: 'High fault tolerance over unstable networks and immediate telemetry visibility for industrial operations.',
+      es: 'Alta tolerancia a fallos en redes inestables y visibilidad inmediata de telemetría para operaciones industriales.'
     },
     visibility: 'case-study',
     featured: true,
@@ -55,18 +105,18 @@ export const projectsData: Project[] = [
     id: 'go-hexagonal-template',
     title: 'Go Hexagonal Architecture Template',
     summary: {
-      en: 'Open source production-ready boilerplate for building Go microservices with Ports & Adapters architecture.',
+      en: 'Open-source production-ready starter template for building Go microservices with Ports & Adapters architecture.',
       es: 'Plantilla de código abierto lista para producción para construir microservicios en Go con arquitectura Ports & Adapters.'
     },
     category: 'backend',
     tech: ['Go', 'Gin', 'PostgreSQL', 'Hexagonal Architecture', 'Docker'],
     problem: {
       en: 'Need for a clean, consistent starter template in Go enforcing strict separation between core domain logic and external infrastructure adapters.',
-      es: 'Necesidad de una plantilla inicial limpia y consistente en Go que fuerce la separación estricta entre la lógica de dominio y los adaptadores de infraestructura.'
+      es: 'Necesidad de una plantilla inicial limpia y consistente en Go que fuerce la separación estricta entre la lógica de dominio y adaptadores de infraestructura.'
     },
     solution: {
-      en: 'Implemented HTTP REST handlers, Gin web framework, PostgreSQL repository interfaces, and environment configuration structured cleanly into ports and adapters.',
-      es: 'Se implementaron controladores HTTP REST con Gin, interfaces de repositorio para PostgreSQL y configuración de entorno estructuradas limpiamente en puertos y adaptadores.'
+      en: 'Implemented HTTP REST handlers, Gin web framework, PostgreSQL repository interfaces, unit tests, and environment configuration cleanly decoupled.',
+      es: 'Se implementaron controladores HTTP REST con Gin, interfaces de repositorio para PostgreSQL, pruebas unitarias y configuración desacoplada.'
     },
     outcome: {
       en: 'Public reference template on GitHub serving as a blueprint for modular, highly testable backend services.',
@@ -78,75 +128,25 @@ export const projectsData: Project[] = [
     published: true
   },
   {
-    id: 'emaus-pos-system',
-    title: 'EMAUS POS — Point of Sale & Inventory',
+    id: 'urban-taxi-app',
+    title: 'Urban Mobility & Taxi Application (Personal Project)',
     summary: {
-      en: 'Multi-branch point-of-sale system with real-time stock sync, cashier management, and sales reports.',
-      es: 'Sistema de punto de venta multisucursal con sincronización de inventario en tiempo real, gestión de cajas y reportes de ventas.'
-    },
-    category: 'fullstack',
-    tech: ['NestJS', 'TypeScript', 'Vue', 'PostgreSQL', 'Redis'],
-    problem: {
-      en: 'Outdated legacy sales software experiencing slow transaction speed and inventory sync conflicts across branches.',
-      es: 'Software de ventas heredado con baja velocidad de transacción y conflictos de sincronización de stock entre sucursales.'
-    },
-    solution: {
-      en: 'Developed modular backend services coupled with a responsive frontend interface supporting offline cash operations and real-time inventory locking.',
-      es: 'Se desarrollaron servicios backend modulares junto a una interfaz web responsive capaz de soportar operaciones de caja e inventario en tiempo real.'
-    },
-    outcome: {
-      en: 'Improved cashier throughput, eliminated inventory discrepancies, and streamlined daily reconciliation reports.',
-      es: 'Mejora en la velocidad de atención en caja, eliminación de discrepancias de inventario y agilización de arqueos diarios.'
-    },
-    visibility: 'case-study',
-    featured: false,
-    published: true
-  },
-  {
-    id: 'industrial-dispenser-integrations',
-    title: 'Industrial Controller & Event Integrations',
-    summary: {
-      en: 'Event-driven communication bridge interfacing hardware controllers and dispenser units with cloud backend APIs.',
-      es: 'Puente de comunicación orientado a eventos que conecta controladores de hardware y dispensadores con APIs backend en la nube.'
-    },
-    category: 'industrial',
-    tech: ['Go', 'WebSockets', 'TCP/IP Sockets', 'Redis', 'Docker'],
-    problem: {
-      en: 'Connecting proprietary hardware dispensing devices to central server management over low-latency socket protocols.',
-      es: 'Conexión de dispositivos dispensadores de hardware propietario con el servidor central mediante protocolos de socket de baja latencia.'
-    },
-    solution: {
-      en: 'Created an asynchronous event listener using Go and WebSockets to process telemetry signals, manage state machines, and broadcast live alerts.',
-      es: 'Se creó un oyente de eventos asíncrono en Go y WebSockets para procesar señales telemétricas, gestionar máquinas de estado y emitir alertas en vivo.'
-    },
-    outcome: {
-      en: 'High reliability under unstable connectivity and immediate visibility over physical dispenser operations.',
-      es: 'Alta confiabilidad en conectividad inestable y visibilidad inmediata sobre la operación física de los dispensadores.'
-    },
-    visibility: 'case-study',
-    featured: false,
-    published: true
-  },
-  {
-    id: 'mobile-pos-capacitor',
-    title: 'Mobile POS & Offline Sync',
-    summary: {
-      en: 'Cross-platform mobile application enabling store clerks to perform mobile checkout and inventory audits.',
-      es: 'Aplicación móvil multiplataforma que permite a los vendedores realizar ventas en movilidad y auditorías de inventario.'
+      en: 'Personal mobile application exploring real-time location streaming, driver dispatch, ride matching, and route optimization.',
+      es: 'Proyecto personal móvil enfocado en transmisión de ubicación en vivo, despacho de conductores, asignación de viajes y rutas.'
     },
     category: 'mobile',
-    tech: ['Vue 3', 'Capacitor', 'TypeScript', 'SQLite', 'Tailwind CSS'],
+    tech: ['Flutter / Dart', 'React Native / Expo', 'WebSockets', 'Go', 'REST APIs'],
     problem: {
-      en: 'Need for a handheld checkout terminal that continues operating inside warehouse areas without active Wi-Fi connection.',
-      es: 'Necesidad de una terminal de venta portátil que continúe operando en zonas de almacén sin conexión Wi-Fi activa.'
+      en: 'Exploring cross-platform mobile patterns for live location streaming and driver dispatch mechanisms over low-latency WebSockets.',
+      es: 'Exploración de patrones móviles multiplataforma para transmisión de ubicación en vivo y mecanismos de despacho sobre WebSockets.'
     },
     solution: {
-      en: 'Built a mobile web app wrapped with Capacitor, using local SQLite storage for offline transactions and background sync on reconnect.',
-      es: 'Se construyó una app móvil empaquetada con Capacitor usando SQLite local para guardar transacciones offline y sincronizar en segundo plano al reconectar.'
+      en: 'Developed a dual passenger/driver workflow featuring interactive map integration, WebSocket location update events, and state management.',
+      es: 'Se desarrolló un flujo para pasajeros y conductores con integración de mapas interactivos, eventos WebSocket de ubicación y gestión de estado.'
     },
     outcome: {
-      en: 'Fast sales processing on mobile handheld devices with resilient automatic synchronization.',
-      es: 'Procesamiento rápido de ventas en dispositivos portátiles con sincronización automática y resistente.'
+      en: 'Fully functional personal prototype showcasing mobile UI architecture and geospatial event handling.',
+      es: 'Prototipo personal funcional que demuestra arquitectura UI móvil y manejo de eventos geoespaciales.'
     },
     visibility: 'case-study',
     featured: false,

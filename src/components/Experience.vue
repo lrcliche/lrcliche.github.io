@@ -4,6 +4,7 @@ import { useLocale } from '../composables/useLocale'
 import { en } from '../i18n/en'
 import { es } from '../i18n/es'
 import { experienceData } from '../data/experience'
+import ArchitectureDiagram from './ArchitectureDiagram.vue'
 
 const { locale } = useLocale()
 const t = (keyPath: string) => {
@@ -68,6 +69,9 @@ const publishedExperience = computed(() => experienceData.filter(exp => exp.publ
           </div>
         </div>
       </div>
+
+      <!-- Industrial Architecture Diagram Section -->
+      <ArchitectureDiagram />
     </div>
   </section>
 </template>

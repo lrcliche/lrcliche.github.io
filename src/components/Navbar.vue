@@ -33,22 +33,24 @@ const isMobileMenuOpen = ref(false)
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+      <nav class="hidden md:flex items-center space-x-5 text-sm font-medium">
         <a href="#about" class="hover:text-emerald-400 transition-colors">{{ t('nav.about') }}</a>
+        <a href="#expertise" class="hover:text-emerald-400 transition-colors">{{ t('nav.expertise') }}</a>
         <a href="#experience" class="hover:text-emerald-400 transition-colors">{{ t('nav.experience') }}</a>
         <a href="#projects" class="hover:text-emerald-400 transition-colors">{{ t('nav.projects') }}</a>
         <a href="#tech" class="hover:text-emerald-400 transition-colors">{{ t('nav.tech') }}</a>
         <a href="#contact" class="hover:text-emerald-400 transition-colors">{{ t('nav.contact') }}</a>
         
-        <a 
-          v-if="profileData.cvUrl" 
-          :href="profileData.cvUrl" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="px-3 py-1.5 rounded-md border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 transition-colors"
-        >
-          {{ t('nav.cv') }}
-        </a>
+        <div v-if="profileData.cvUrl" class="flex items-center gap-2">
+          <a 
+            :href="profileData.cvUrl" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="px-3 py-1.5 rounded-md border border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 transition-colors text-xs font-mono font-semibold"
+          >
+            {{ t('nav.viewCv') }}
+          </a>
+        </div>
       </nav>
 
       <!-- Locale Toggle & Mobile Menu Switch -->
@@ -79,6 +81,7 @@ const isMobileMenuOpen = ref(false)
     <!-- Mobile Navigation Drawer -->
     <div v-if="isMobileMenuOpen" class="md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-3">
       <a @click="isMobileMenuOpen = false" href="#about" class="block py-2 text-slate-300 hover:text-emerald-400">{{ t('nav.about') }}</a>
+      <a @click="isMobileMenuOpen = false" href="#expertise" class="block py-2 text-slate-300 hover:text-emerald-400">{{ t('nav.expertise') }}</a>
       <a @click="isMobileMenuOpen = false" href="#experience" class="block py-2 text-slate-300 hover:text-emerald-400">{{ t('nav.experience') }}</a>
       <a @click="isMobileMenuOpen = false" href="#projects" class="block py-2 text-slate-300 hover:text-emerald-400">{{ t('nav.projects') }}</a>
       <a @click="isMobileMenuOpen = false" href="#tech" class="block py-2 text-slate-300 hover:text-emerald-400">{{ t('nav.tech') }}</a>
@@ -90,7 +93,7 @@ const isMobileMenuOpen = ref(false)
         rel="noopener noreferrer" 
         class="block py-2 text-emerald-400 font-semibold"
       >
-        {{ t('nav.cv') }}
+        {{ t('nav.viewCv') }}
       </a>
     </div>
   </header>

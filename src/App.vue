@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
 import About from './components/About.vue'
+import EngineeringExpertise from './components/EngineeringExpertise.vue'
 import Experience from './components/Experience.vue'
 import Projects from './components/Projects.vue'
 import TechStack from './components/TechStack.vue'
@@ -15,6 +16,7 @@ import Footer from './components/Footer.vue'
     <main>
       <Hero />
       <About />
+      <EngineeringExpertise />
       <Experience />
       <Projects />
       <TechStack />
